@@ -53,9 +53,9 @@ const DeCourceyWebsite = () => {
     bgDark: "bg-[#2c2a27]", // Darker for footer/nav
     text: "text-gray-100",
     textMuted: "text-gray-300",
-    accent: "text-amber-500",
-    accentBg: "bg-amber-600",
-    accentHover: "hover:bg-amber-700",
+    accent: "text-brand",
+    accentBg: "bg-brand",
+    accentHover: "hover:bg-brand/90",
     border: "border-gray-600",
   };
 
@@ -77,7 +77,7 @@ const DeCourceyWebsite = () => {
     const variants = {
       primary: `${theme.accentBg} text-white ${theme.accentHover}`,
       outline: `border-2 ${theme.border} text-white hover:bg-white hover:text-[#3c3a37]`,
-      text: `text-white hover:text-amber-500 p-0`,
+      text: `text-white hover:text-brand p-0`,
     };
     return (
       <button
@@ -94,7 +94,7 @@ const DeCourceyWebsite = () => {
       <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white uppercase tracking-wider">
         {title}
       </h2>
-      <div className="h-1 w-20 bg-amber-600 mb-4"></div>
+      <div className="h-1 w-20 bg-brand mb-4"></div>
       {subtitle && (
         <p className={`text-lg ${theme.textMuted} max-w-2xl`}>{subtitle}</p>
       )}
@@ -120,7 +120,7 @@ const DeCourceyWebsite = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Quality Craftsmanship. <br />
             Honest Work. <br />
-            <span className="text-amber-500">Local Expertise.</span>
+            <span className="text-brand">Local Expertise.</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8 font-light">
             Specializing in new home builds, renovations, and roofing services
@@ -141,7 +141,7 @@ const DeCourceyWebsite = () => {
       <section className={`py-20 px-4 ${theme.bg}`}>
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-amber-500 font-bold tracking-widest mb-2">
+            <h3 className="text-brand font-bold tracking-widest mb-2">
               FULL SERVICE CONTRACTOR
             </h3>
             <h2 className="text-3xl font-bold text-white mb-6">
@@ -161,7 +161,7 @@ const DeCourceyWebsite = () => {
                 "Locally Owned & Operated",
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-3">
-                  <CheckCircle className="text-amber-500 w-5 h-5" />
+                  <CheckCircle className="text-brand w-5 h-5" />
                   <span className="text-white font-medium">{item}</span>
                 </div>
               ))}
@@ -201,16 +201,16 @@ const DeCourceyWebsite = () => {
             ].map((service, idx) => (
               <div
                 key={idx}
-                className={`${theme.bgLight} p-8 hover:-translate-y-2 transition-transform duration-300 border-b-4 border-amber-600`}
+                className={`${theme.bgLight} p-8 hover:-translate-y-2 transition-transform duration-300 border-b-4 border-brand`}
               >
-                <div className="text-amber-500 mb-4">{service.icon}</div>
+                <div className="text-brand mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold text-white mb-3">
                   {service.title}
                 </h3>
                 <p className={`${theme.textMuted} mb-4`}>{service.desc}</p>
                 <button
                   onClick={() => navigateTo("services")}
-                  className="text-amber-500 font-semibold flex items-center gap-2 hover:gap-3 transition-all"
+                  className="text-brand font-semibold flex items-center gap-2 hover:gap-3 transition-all"
                 >
                   Learn More <ArrowRight className="w-4 h-4" />
                 </button>
@@ -249,7 +249,7 @@ const DeCourceyWebsite = () => {
               ].map((item, idx) => (
                 <li
                   key={idx}
-                  className="flex items-start gap-3 pl-4 border-l-2 border-amber-600"
+                  className="flex items-start gap-3 pl-4 border-l-2 border-brand"
                 >
                   <span>{item}</span>
                 </li>
@@ -272,7 +272,7 @@ const DeCourceyWebsite = () => {
               <p className="text-gray-300">
                 48 Thorndale Drive, Charlottetown, PE
               </p>
-              <p className="text-amber-500 mt-2 font-medium">
+              <p className="text-brand mt-2 font-medium">
                 Serving all of Prince Edward Island
               </p>
             </div>
@@ -293,7 +293,7 @@ const DeCourceyWebsite = () => {
         {/* Home Renovations Group */}
         <div className="mb-20">
           <div className="flex items-center gap-4 mb-8">
-            <div className="p-3 bg-amber-600 rounded-sm">
+            <div className="p-3 bg-brand rounded-sm">
               <Home className="text-white w-6 h-6" />
             </div>
             <h2 className="text-3xl font-bold text-white">Home Renovations</h2>
@@ -490,7 +490,7 @@ const DeCourceyWebsite = () => {
                   />
                 </div>
                 <h3 className="text-xl font-bold text-white">{p.title}</h3>
-                <span className="text-amber-500 text-sm font-medium tracking-wider uppercase">
+                <span className="text-brand text-sm font-medium tracking-wider uppercase">
                   {p.loc}
                 </span>
                 <p className="text-gray-400 mt-1 text-sm">{p.desc}</p>
@@ -546,14 +546,14 @@ const DeCourceyWebsite = () => {
                 key={idx}
                 className={`${theme.bgLight} p-8 rounded-sm relative`}
               >
-                <div className="text-amber-600 absolute top-4 left-4 text-6xl opacity-20 font-serif">
+                <div className="text-brand absolute top-4 left-4 text-6xl opacity-20 font-serif">
                   "
                 </div>
                 <p className="text-gray-200 text-lg italic mb-6 relative z-10">
                   {r.text}
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 bg-brand rounded-full flex items-center justify-center text-white font-bold">
                     {r.name.charAt(0)}
                   </div>
                   <div>
@@ -582,7 +582,7 @@ const DeCourceyWebsite = () => {
           <div className="space-y-10">
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-amber-600/20 text-amber-500 rounded-sm">
+                <div className="p-3 bg-brand/20 text-brand rounded-sm">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
@@ -594,7 +594,7 @@ const DeCourceyWebsite = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-amber-600/20 text-amber-500 rounded-sm">
+                <div className="p-3 bg-brand/20 text-brand rounded-sm">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
@@ -606,7 +606,7 @@ const DeCourceyWebsite = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-amber-600/20 text-amber-500 rounded-sm">
+                <div className="p-3 bg-brand/20 text-brand rounded-sm">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
@@ -646,7 +646,7 @@ const DeCourceyWebsite = () => {
                   </label>
                   <input
                     type="text"
-                    className={`w-full bg-[#3c3a37] border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-amber-500`}
+                    className={`w-full bg-[#3c3a37] border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-brand`}
                   />
                 </div>
                 <div>
@@ -655,7 +655,7 @@ const DeCourceyWebsite = () => {
                   </label>
                   <input
                     type="text"
-                    className={`w-full bg-[#3c3a37] border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-amber-500`}
+                    className={`w-full bg-[#3c3a37] border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-brand`}
                   />
                 </div>
               </div>
@@ -666,7 +666,7 @@ const DeCourceyWebsite = () => {
                 </label>
                 <input
                   type="email"
-                  className={`w-full bg-[#3c3a37] border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-amber-500`}
+                  className={`w-full bg-[#3c3a37] border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-brand`}
                 />
               </div>
 
@@ -675,7 +675,7 @@ const DeCourceyWebsite = () => {
                   Service Needed
                 </label>
                 <select
-                  className={`w-full bg-[#3c3a37] border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-amber-500`}
+                  className={`w-full bg-[#3c3a37] border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-brand`}
                 >
                   <option>Select a service...</option>
                   <option>Home Renovation</option>
@@ -692,7 +692,7 @@ const DeCourceyWebsite = () => {
                 </label>
                 <textarea
                   rows={4}
-                  className={`w-full bg-[#3c3a37] border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-amber-500`}
+                  className={`w-full bg-[#3c3a37] border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-brand`}
                 ></textarea>
               </div>
 
@@ -708,7 +708,7 @@ const DeCourceyWebsite = () => {
 
   return (
     <div
-      className={`min-h-screen ${theme.bg} font-sans selection:bg-amber-500 selection:text-white`}
+      className={`min-h-screen ${theme.bg} font-sans selection:bg-brand selection:text-white`}
     >
       {/* Navbar */}
       <nav
@@ -721,7 +721,7 @@ const DeCourceyWebsite = () => {
               className="flex-shrink-0 cursor-pointer flex items-center gap-2"
               onClick={() => navigateTo("home")}
             >
-              <div className="text-amber-600 p-1 rounded-sm">
+              <div className="text-brand p-1 rounded-sm">
                 <img
                   src="/small-logo-transparent.png"
                   alt="DeCourcey Construction Logo"
@@ -747,7 +747,7 @@ const DeCourceyWebsite = () => {
                     onClick={() => navigateTo(link.id)}
                     className={`${
                       currentPage === link.id
-                        ? "text-amber-500"
+                        ? "text-brand"
                         : "text-gray-300 hover:text-white"
                     } px-3 py-2 text-sm font-medium transition-colors uppercase tracking-wide`}
                   >
@@ -789,7 +789,7 @@ const DeCourceyWebsite = () => {
                   onClick={() => navigateTo(link.id)}
                   className={`${
                     currentPage === link.id
-                      ? "text-amber-500 bg-black/20"
+                      ? "text-brand bg-black/20"
                       : "text-gray-300"
                   } block w-full text-left px-3 py-3 rounded-md text-base font-medium`}
                 >
@@ -816,7 +816,7 @@ const DeCourceyWebsite = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="text-amber-600 p-1 rounded-sm">
+              <div className="text-brand p-1 rounded-sm">
                 <img
                   src="/small-logo.png"
                   alt="DeCourcey Construction Logo"
@@ -838,10 +838,10 @@ const DeCourceyWebsite = () => {
             </p>
             <div className="flex gap-4">
               {/* Social placeholders */}
-              <div className="w-10 h-10 bg-[#3c3a37] flex items-center justify-center text-gray-400 hover:text-amber-500 hover:bg-white transition-all cursor-pointer rounded-sm">
+              <div className="w-10 h-10 bg-[#3c3a37] flex items-center justify-center text-gray-400 hover:text-brand hover:bg-white transition-all cursor-pointer rounded-sm">
                 <Facebook size={20} />
               </div>
-              <div className="w-10 h-10 bg-[#3c3a37] flex items-center justify-center text-gray-400 hover:text-amber-500 hover:bg-white transition-all cursor-pointer rounded-sm">
+              <div className="w-10 h-10 bg-[#3c3a37] flex items-center justify-center text-gray-400 hover:text-brand hover:bg-white transition-all cursor-pointer rounded-sm">
                 <Instagram size={20} />
               </div>
             </div>
@@ -856,7 +856,7 @@ const DeCourceyWebsite = () => {
                 <li key={link}>
                   <button
                     onClick={() => navigateTo(link.toLowerCase())}
-                    className="text-gray-400 hover:text-amber-500 transition-colors"
+                    className="text-gray-400 hover:text-brand transition-colors"
                   >
                     {link}
                   </button>
@@ -871,17 +871,17 @@ const DeCourceyWebsite = () => {
             </h4>
             <ul className="space-y-4 text-gray-400">
               <li className="flex gap-3 items-start">
-                <MapPin className="w-5 h-5 text-amber-500 shrink-0" /> 48
+                <MapPin className="w-5 h-5 text-brand shrink-0" /> 48
                 Thorndale Drive
                 <br />
                 Charlottetown, PE
               </li>
               <li className="flex gap-3 items-center">
-                <Phone className="w-5 h-5 text-amber-500 shrink-0" /> (782)
+                <Phone className="w-5 h-5 text-brand shrink-0" /> (782)
                 377-5247
               </li>
               <li className="flex gap-3 items-center">
-                <Mail className="w-5 h-5 text-amber-500 shrink-0" />{" "}
+                <Mail className="w-5 h-5 text-brand shrink-0" />{" "}
                 DeCourceyConstructionLtd@gmail.com
               </li>
             </ul>
